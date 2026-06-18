@@ -8,35 +8,29 @@ package javaapplication6.products;
  *
  * @author david
  */
-public class ProductoFísico implements Producto{
-    float peso;
-    float dimensiones;
+public class ProductoFísico extends Producto{
+    private double peso;
+    private String dimensiones;
 
-    public ProductoFísico() {
-    }
-    
-    
-
-    public ProductoFísico(float peso, float dimensiones) {
+    public ProductoFísico(int id,double peso,  String nombre, double precio, String categoria, String dimensiones) {
+        super(id, nombre, precio, categoria);
         this.peso = peso;
         this.dimensiones = dimensiones;
     }
 
-    public float getPeso() {
+    
+
+    public double obtenerPeso() {
         return peso;
     }
 
-    public void setPeso(float peso) {
-        this.peso = peso;
-    }
-
-    public float getDimensiones() {
+    public String obtenerDimensiones() {
         return dimensiones;
     }
 
-    public void setDimensiones(float dimensiones) {
-        this.dimensiones = dimensiones;
+    @Override
+    public String obtenerDetalles() {
+        return "Producto Físico: " + nombre + " | Peso: " + peso + "kg | Dimensiones: " + dimensiones;
     }
-    
     
 }

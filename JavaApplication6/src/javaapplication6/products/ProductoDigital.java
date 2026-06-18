@@ -8,37 +8,27 @@ package javaapplication6.products;
  *
  * @author david
  */
-public class ProductoDigital implements Producto{
+public class ProductoDigital extends Producto{
     
-    float size;
-    String formato;
+    private double tamanoArchivo;
+    private String formato;
 
-    public ProductoDigital() {
-    }
-    
-    
-
-    public ProductoDigital(float size, String formato) {
-        this.size = size;
+    public ProductoDigital(int id, String nombre, double precio, String categoria, double tamanoArchivo, String formato) {
+        super(id, nombre, precio, categoria);
+        this.tamanoArchivo = tamanoArchivo;
         this.formato = formato;
     }
 
-    public float getSize() {
-        return size;
+    public double obtenerTamanoArchivo() {
+        return tamanoArchivo;
     }
 
-    public void setSize(float size) {
-        this.size = size;
-    }
-
-    public String getFormato() {
+    public String obtenerFormato() {
         return formato;
     }
 
-    public void setFormato(String formato) {
-        this.formato = formato;
+    @Override
+    public String obtenerDetalles() {
+        return "Producto Digital: " + nombre + " | Tamaño: " + tamanoArchivo + "MB | Formato: " + formato;
     }
-    
-    
-    
 }

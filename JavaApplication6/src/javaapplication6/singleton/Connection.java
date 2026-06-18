@@ -8,6 +8,6 @@ package javaapplication6.singleton;
  *
  * @author david
  */
-public class BaseDatosCliente { 
+public class Connection { 
     
 }

@@ -4,16 +4,13 @@
  */
 package javaapplication6;
 
+import java.util.Map;
 import javaapplication6.products.Producto;
-import javaapplication6.products.ProductoFísico;
 
 /**
  *
  * @author david
  */
-public class CreadorProductoFisico extends CreadorProducto{
-    
-    public Producto crearProducto() {
-        return new ProductoFísico();
-    }
+public abstract class FabricaProducto {
+    public abstract Producto crearProducto(int id, String nombre, double precio, String categoria, Map<String, Object> atributos);
 }

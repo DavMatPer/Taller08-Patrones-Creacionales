@@ -12,6 +12,11 @@ public class ProductoFísico implements Producto{
     float peso;
     float dimensiones;
 
+    public ProductoFísico() {
+    }
+    
+    
+
     public ProductoFísico(float peso, float dimensiones) {
         this.peso = peso;
         this.dimensiones = dimensiones;

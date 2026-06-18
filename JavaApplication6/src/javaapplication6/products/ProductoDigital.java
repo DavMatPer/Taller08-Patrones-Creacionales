@@ -13,6 +13,11 @@ public class ProductoDigital implements Producto{
     float size;
     String formato;
 
+    public ProductoDigital() {
+    }
+    
+    
+
     public ProductoDigital(float size, String formato) {
         this.size = size;
         this.formato = formato;
